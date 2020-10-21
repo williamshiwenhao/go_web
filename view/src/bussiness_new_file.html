@@ -20,13 +20,13 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>新增视频业务</h1>
+                                <h1>新增文件业务</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="./index.html">起始页</a></li>
                                     <li class="breadcrumb-item">新增业务</li>
-                                    <li class="breadcrumb-item active">新增视频业务</li>
+                                    <li class="breadcrumb-item active">新增文件业务</li>
                                 </ol>
                             </div>
                         </div>
@@ -40,43 +40,16 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div class="row row-cols-2">
-                            <!--带宽-->
-                            <div class="col">
-                                <div class="form-group">
-                                    <label>带宽</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                            placeholder="输入带宽">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">kbps</span>
-                                        </div>
+                            <div clsas="form-group col">
+                                <label>选择本地文件</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">选择文件</label>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!--协议-->
-                            <div class="col">
-                                <div class="form-group">
-                                    <label>协议</label>
-                                    <div class="form-group">
-                                        <select class="form-control select2" style="width: 100%;">
-                                            <option>RTP</option>
-                                            <option>RTCP</option>
-                                            <option>UDP</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--协议-->
-                            <div class="col">
-                                <div class="form-group">
-                                    <label>优先级</label>
-                                    <select class="form-control select2" style="width: 100%;">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
+                                    <span class="input-group-append" id="upload_file">
+                                        <button type="button" class="btn btn-info btn-flat">上传</button>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -106,6 +79,9 @@
 <script>
     $('#bussiness_new').addClass('active')
     $('#bussiness_new').parent().addClass('menu-open')
-    $('#bussiness_new_video').addClass('active')
+    $('#bussiness_new_file').addClass('active')
+    $(document).ready(function () {
+        bsCustomFileInput.init();
+    });
 </script>
 <script src="js/bussiness_new_video.js"></script>
