@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+@@include('../template/meta.html')
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        @@include('../template/head.html')
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        @@include('../template/side.html')
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="col-12">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1>新增视频业务</h1>
+                            </div>
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item"><a href="./index.html">起始页</a></li>
+                                    <li class="breadcrumb-item active">新增视频业务</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title"></h3>
+                        <!-- /.card-tools -->
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <!--带宽-->
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>带宽</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                            placeholder="输入带宽">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">kbps</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--协议-->
+                                <div class="form-group">
+                                    <label>协议</label>
+                                    <div class="form-group">
+                                        <select class="form-control select2" style="width: 100%;">
+                                            <option>RTP</option>
+                                            <option>RTCP</option>
+                                            <option>UDP</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--协议-->
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>优先级</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary float-right" id="submit_video">创建业务</button>
+                    </div>
+                    <div class="overlay d-none" id="card_overlay">
+                        <i class="fas fa-2x fa-sync-alt fa-spin"></i>
+                    </div>
+                </div>
+                <!-- /.card -->
+            </div>
+
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+            </aside>
+            <!-- /.control-sidebar -->
+        </div>
+        <!-- ./wrapper -->
+    </div>
+</body>
+
+</html>
+@@include('../template/scripts.html')
+<script>
+    $('#bussiness_new').addClass('active')
+    $('#bussiness_new').parent().addClass('menu-open')
+    $('#bussiness_new_video').addClass('active')
+</script>
+<script src="js/bussiness_new_video.js"></script>
