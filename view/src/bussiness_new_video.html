@@ -25,6 +25,7 @@
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="./index.html">起始页</a></li>
+                                    <li class="breadcrumb-item">新增业务</li>
                                     <li class="breadcrumb-item active">新增视频业务</li>
                                 </ol>
                             </div>
@@ -38,9 +39,9 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <div class="row">
+                        <div class="row row-cols-2">
                             <!--带宽-->
-                            <div class="col-6">
+                            <div class="col">
                                 <div class="form-group">
                                     <label>带宽</label>
                                     <div class="input-group">
@@ -51,8 +52,10 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <!--协议-->
+                            <!--协议-->
+                            <div class="col">
                                 <div class="form-group">
                                     <label>协议</label>
                                     <div class="form-group">
@@ -66,7 +69,7 @@
                             </div>
 
                             <!--协议-->
-                            <div class="col-6">
+                            <div class="col">
                                 <div class="form-group">
                                     <label>优先级</label>
                                     <select class="form-control select2" style="width: 100%;">
@@ -78,24 +81,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary float-right" id="submit_video">创建业务</button>
-                    </div>
-                    <div class="overlay d-none" id="card_overlay">
-                        <i class="fas fa-2x fa-sync-alt fa-spin"></i>
-                    </div>
                 </div>
-                <!-- /.card -->
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary float-right" id="submit_video">创建业务</button>
+                </div>
+                <div class="overlay d-none" id="card_overlay">
+                    <i class="fas fa-2x fa-sync-alt fa-spin"></i>
+                </div>
             </div>
-
-            <!-- Control Sidebar -->
-            <aside class="control-sidebar control-sidebar-dark">
-                <!-- Control sidebar content goes here -->
-            </aside>
-            <!-- /.control-sidebar -->
+            <!-- /.card -->
         </div>
-        <!-- ./wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
     </div>
+    <!-- ./wrapper -->
 </body>
 
 </html>
