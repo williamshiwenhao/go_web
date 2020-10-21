@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  *   AdminLTE v3.0.5
  *     Only Core
@@ -3800,6 +3801,10 @@ input[type="button"].btn-block {
 
 .custom-file-input:lang(en) ~ .custom-file-label::after {
   content: "Browse";
+}
+
+.custom-file-input:lang(zh-CN) ~ .custom-file-label::after {
+  content: "浏览";
 }
 
 .custom-file-input ~ .custom-file-label[data-browse]::after {
