@@ -28,7 +28,7 @@ var data = [
 var str = ''
 var typeMap = new Map();
 for (var i = 0; i < data.length; i++) {
-    str += "<tr><td>" + i + 1
+    str += "<tr><td>" + ( i + 1)
         + "</td><td>" + data[i].type
         + "</td><td>" + data[i].status
         + "</td><td>" + data[i].time

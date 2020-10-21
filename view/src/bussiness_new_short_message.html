@@ -54,21 +54,7 @@
                                 </div>
                             </div>
 
-                            <!--协议-->
-                            <div class="col">
-                                <div class="form-group">
-                                    <label>协议</label>
-                                    <div class="form-group">
-                                        <select class="form-control select2" style="width: 100%;">
-                                            <option>RTP</option>
-                                            <option>RTCP</option>
-                                            <option>UDP</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--协议-->
+                            <!--优先级-->
                             <div class="col">
                                 <div class="form-group">
                                     <label>优先级</label>
@@ -78,6 +64,11 @@
                                         <option>3</option>
                                     </select>
                                 </div>
+                            </div>
+
+                            <div class="col">
+                                <label>周期任务：</label>
+                                <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch>
                             </div>
                         </div>
                     </div>
@@ -103,9 +94,19 @@
 
 </html>
 @@include('../template/scripts.html')
+<script src="/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <script>
     $('#bussiness_new').addClass('active')
     $('#bussiness_new').parent().addClass('menu-open')
     $('#bussiness_new_short_message').addClass('active')
+    $("input[data-bootstrap-switch]").each(function () {
+        $(this).bootstrapSwitch(
+            {
+                'state': $(this).prop('checked'),
+                'onText': "是",
+                "offText": "否"
+            })
+    });
 </script>
 <script src="js/bussiness_new_video.js"></script>
+<!-- Bootstrap Switch -->
